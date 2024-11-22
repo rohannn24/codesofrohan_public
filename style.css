@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +14,7 @@ html,body{
     justify-content: space-between;
     padding: 20px 30px;
     background-color: rgba(1, 85, 26, 0.712);
+    position: relative;
 }
 .leftNav{
     display: flex;
@@ -38,4 +40,39 @@ html,body{
 }
 .listitems{
     color: white;
+}
+.bgr{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    flex-direction: column;
+    gap: 5px;
+    transform: translateY(-50%);
+}
+.lines{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50px;
+}
+@media screen and (max-width: 900px) {
+    .rightNav{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 60vw;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    .navlist{
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    .listitems>a{
+        color: black;
+        text-decoration: none;
+    }
 }
