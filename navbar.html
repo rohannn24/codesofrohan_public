@@ -58,8 +58,13 @@
             color: white;
         }
 
+        .listitems>a {
+            color: white;
+            text-decoration: none;
+        }
+
         .bgr {
-            display: flex;
+            display: none;
             position: absolute;
             top: 50%;
             right: 30px;
@@ -76,6 +81,10 @@
         }
 
         @media screen and (max-width: 900px) {
+            .bgr {
+                display: flex;
+            }
+
             .rightNav {
                 position: fixed;
                 left: -100%;
