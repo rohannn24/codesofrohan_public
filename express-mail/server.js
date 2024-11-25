@@ -8,7 +8,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get('/send-email', async (req, res) => {
+app.post('/send-email', async (req, res) => {
     try {
         const { reciver, subject, body } = req.body;
         await sendEmail(reciver, subject, body);
